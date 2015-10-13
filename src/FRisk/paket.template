@@ -1,0 +1,23 @@
+type project
+owners
+    Mark Townsend
+authors 
+    Mark Townsend
+projectUrl
+    http://github.com/markstownsend/FRisk
+iconUrl
+    https://raw.githubusercontent.com/markstownsend/FRisk/master/docs/files/img/logo.png
+licenseUrl
+    http://github.com/markstownsend/FRisk/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    F# Risk Monte Carlo Options VaR
+summary
+    Things I've F(orgotten about)Risk.
+description
+    An aide memoire for risk techniques and practices as they pertain to financial markets.
+
+
