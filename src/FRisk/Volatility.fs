@@ -8,7 +8,7 @@ module Volatility =
   ///
   /// ## Parameters
   ///  - `prices` - an array of prices, presumed to be regularly spaced but it doesn't really matter for this function
-  let logReturns (prices : float[]) = 
+  let logReturns (prices : double[]) = 
         prices
             |> Array.toSeq
             |> Seq.skip(1)

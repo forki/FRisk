@@ -162,24 +162,6 @@ Target "SourceLink" (fun _ ->
 #endif
 
 // --------------------------------------------------------------------------------------
-// Build a NuGet package
-
-Target "NuGet" (fun _ ->
-    Paket.Pack(fun p -> 
-        { p with
-            OutputPath = "bin"
-            Version = release.NugetVersion
-            ReleaseNotes = toLines release.Notes})
-)
-
-Target "PublishNuget" (fun _ ->
-    Paket.Push(fun p -> 
-        { p with
-            WorkingDir = "bin" })
-)
-
-
-// --------------------------------------------------------------------------------------
 // Generate the documentation
 
 Target "GenerateReferenceDocs" (fun _ ->
@@ -322,7 +304,7 @@ Target "Release" (fun _ ->
     // release on github
     createClient user pw
     |> createDraft gitOwner gitName release.NugetVersion (release.SemVer.PreRelease <> None) release.Notes 
-    // TODO: |> uploadFile "PATH_TO_FILE"    
+    // TODO: |> uploadFile "PATH_TO_FILE"
     |> releaseDraft
     |> Async.RunSynchronously
 )
@@ -349,7 +331,6 @@ Target "All" DoNothing
 #else
   =?> ("SourceLink", Pdbstr.tryFind().IsSome )
 #endif
-  ==> "NuGet"
   ==> "BuildPackage"
 
 "CleanDocs"
@@ -367,7 +348,6 @@ Target "All" DoNothing
   ==> "Release"
 
 "BuildPackage"
-  ==> "PublishNuget"
   ==> "Release"
 
 RunTargetOrDefault "All"
