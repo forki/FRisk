@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>release-notes</title>
+    <title>volatility</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Things I've F(orgotten about)Risk."/>
     <meta name="author" content="Mark Townsend"/>
@@ -32,18 +32,36 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h4><a name="0-0-2-October-28-2015" class="anchor" href="#0-0-2-October-28-2015">0.0.2 - October 28 2015</a></h4>
+<h2><a name="Volatility" class="anchor" href="#Volatility">Volatility</a></h2>
+
+<p>This module contains functions regarding historic volatility.</p>
+
+<p>In order to calculate volatility asset returns are required.  I seem to remember the reason you can't use prices is because prices are lognormally distributed 
+(although I'm not sure that is the crux of it) and because prices are related to each other, there is an element of autocorrelation and that stuffs things up 
+for some reason I have to check on (TODO).  There are 2 ways to estimate volatility from historic prices.  They are as follows :</p>
 
 <ul>
-<li>Small improvements</li>
+<li>percentage price changes</li>
+<li>logarithmic price changes</li>
 </ul>
 
-<h4><a name="0-0-1-October-13-2015" class="anchor" href="#0-0-1-October-13-2015">0.0.1 - October 13 2015</a></h4>
+<p>Log Returns.  I understand this.  I don't have much more to add.  I don't know why I am using arrays in and out as opposed to one of the other memory structures, I should work out why
+or work out a policy and stick with it (TODO).</p>
 
-<ul>
-<li>Initial release</li>
-</ul>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="prep">#r</span> <span class="s">&quot;FRisk.dll&quot;</span>
+<span class="k">open</span> <span class="i">FRisk</span>
 
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">returns</span> <span class="o">=</span> <span class="i">Volatility</span><span class="o">.</span><span class="i">logReturns</span> [| <span class="n">100.25</span>; <span class="n">101.20</span>; <span class="n">101.01</span> |]
+</code></pre></td>
+</tr>
+</table>
+
+<div class="tip" id="fs1">val returns : obj<br /><br />Full name: Volatility.returns</div>
 
         </div>
         <div class="span3">
