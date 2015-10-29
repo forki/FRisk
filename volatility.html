@@ -41,14 +41,14 @@
 
 <p>This module contains functions regarding historic volatility.</p>
 
-<p>In order to calculate volatility asset returns are required.  I seem to remember the reason you can't use prices is because prices are lognormally distributed 
-(although I'm not sure that is the crux of it) and because prices are related to each other, there is an element of autocorrelation and that stuffs things up 
-for some reason I have to check on (TODO).  There are 2 ways to estimate volatility from historic prices.  They are as follows :</p>
+<p>In order to calculate volatility asset returns are required.  Asset returns are normally distributed while asset prices are lognormally distributed.  There are 2 ways to estimate volatility from historic prices.  They are as follows :</p>
 
 <ul>
-<li>percentage price changes</li>
-<li>logarithmic price changes</li>
+<li>percentage price changes or discrete returns</li>
+<li>logarithmic price changes or continuous returns</li>
 </ul>
+
+<p>For short time periods &lt;=1d then continuous returns are practically equivalent to continous returns.</p>
 
 <p>Log Returns.  I understand this.  I don't have much more to add.  I don't know why I am using arrays in and out as opposed to one of the other memory structures, I should work out why
 or work out a policy and stick with it (TODO).</p>
