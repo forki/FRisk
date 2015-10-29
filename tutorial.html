@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Namespaces - FRisk</title>
+    <title>Welcome to FRisk
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content=""/>
+    <meta name="description" content="Things I've F(orgotten about)Risk."/>
     <meta name="author" content="Mark Townsend"/>
 
     <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
@@ -32,30 +33,42 @@
       <div class="row">
         <div class="span9" id="main">
           
+<h1><a name="Welcome-to-FRisk" class="anchor" href="#Welcome-to-FRisk">Welcome to FRisk</a></h1>
 
-<h1>FRisk</h1>
+<p>Pronounced 'F Risk'.  It means F(orgotten) Risk.  It is basic.</p>
 
+<h2><a name="Volatility" class="anchor" href="#Volatility">Volatility</a></h2>
 
-  <h2>FRisk Namespace</h2>
-    <div>
-      <table class="table table-bordered module-list">
-    <thead>
-      <tr><td>Module</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td class="module-name">
-            <a href="frisk-volatility.html">Volatility</a>
-          </td>
-          <td class="xmldoc"><p>This is the volatility module which contains functions to calculate volatility and related measures</p>
+<p>This module contains functions regarding historic volatility.</p>
 
+<p>In order to calculate volatility asset returns are required.  I seem to remember the reason you can't use prices is because prices are lognormally distributed 
+(although I'm not sure that is the crux of it) and because prices are related to each other, there is an element of autocorrelation and that stuffs things up 
+for some reason I have to check on (TODO).  There are 2 ways to estimate volatility from historic prices.  They are as follows :</p>
 
-</td>
-        </tr>
-    </tbody>
-  </table>
+<ul>
+<li>percentage price changes</li>
+<li>logarithmic price changes</li>
+</ul>
 
-    </div>
+<p>Log Returns.  I understand this.  I don't have much more to add.  I don't know why I am using arrays in and out as opposed to one of the other memory structures, I should work out why
+or work out a policy and stick with it (TODO).</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="prep">#r</span> <span class="s">&quot;FRisk.dll&quot;</span>
+<span class="k">open</span> <span class="i">FRisk</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">returns</span> <span class="o">=</span> <span class="i">Volatility</span><span class="o">.</span><span class="i">logReturns</span> [| <span class="n">100.25</span>; <span class="n">101.20</span>; <span class="n">101.01</span> |]
+</code></pre></td>
+</tr>
+</table>
+
+<p>Some more info</p>
+
+<div class="tip" id="fs1">val returns : obj<br /><br />Full name: Tutorial.returns</div>
 
         </div>
         <div class="span3">
