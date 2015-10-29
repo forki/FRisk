@@ -1,3 +1,6 @@
+#### 0.0.4a - October 29 2015
+* Adding Black and Scholes
+
 #### 0.0.4 - October 29 2015
 * Adding Black and Scholes
 

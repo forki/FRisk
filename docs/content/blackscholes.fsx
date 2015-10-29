@@ -45,4 +45,3 @@ The two most common considerations in a financial investment are the expected re
 
 
 *)
-
