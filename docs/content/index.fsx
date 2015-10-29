@@ -7,7 +7,10 @@
 FRisk
 ======================
 
+Welcome to F(orgotten) Risk.  It is basic.
+
 Documentation
+-------------
 
 This project is to remind myself of all the things I have forgotten and am forgetting about risk.  It will end up being a one stop shop for the 
 fundamentals and allow me to chuck out all my course notes from the MTF.  It will also be the limit of what I will hold in (or near) memory and 
@@ -18,7 +21,7 @@ will be such that I understand them.  If it helps others then I am delighted but
 * Pricing a Vanilla European Call (and Put) with Black Scholes
 * Put-Call Parity
 * Implied Volatility
-* Greeks
+* Greeks and the effect of fundamentals on options prices.
 * Monte Carlo simulation
 * VaR
 
@@ -30,14 +33,6 @@ Some more info
 Samples & documentation
 -----------------------
 
-The library comes with comprehensible documentation. 
-It can include tutorials automatically generated from `*.fsx` files in [the content folder][content]. 
-The API reference is automatically generated from Markdown comments in the library implementation.
-
- * [Tutorial](tutorial.html) contains a further explanation of this sample library.
-
- * [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
-   and functions in the library. This includes additional brief samples on using most of the
-   functions.
+There are explanations linked above and an automatically generated [API Reference](reference/index.html) for what that's worth.
  
 *)
