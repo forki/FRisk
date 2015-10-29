@@ -1,3 +1,6 @@
+#### 0.0.3 - October 29 2015
+* Clean up on doc branch again
+
 #### 0.0.2 - October 28 2015
 * Minor changes on documentation branch
 
