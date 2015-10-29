@@ -177,6 +177,9 @@ temp/
 
 # Test results produced by build
 TestResults.xml
+TestResult.xml
+opencovertests.xml
+results.xml
 
 # Nuget outputs
 nuget/*.nupkg
@@ -188,6 +191,18 @@ paket-files
 .paket/paket.exe
 docs/content/license.md
 docs/content/release-notes.md
+nuget/*.nupkg
+
+# Anything extra not related to the documentation branch
 .fake
+.paket
+lib
+src
+tests
+.sln
+.cmd
 docs/tools/FSharp.Formatting.svclog
 paket.template
+build.cmd
+build.fsx
+build.sh
