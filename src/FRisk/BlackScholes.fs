@@ -1,4 +1,4 @@
-module FRisk.Volatility
+module FRisk.BlackScholes
   
 /// Returns the log returns given an array of prices (presumed)
 ///

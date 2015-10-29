@@ -13,7 +13,7 @@ be the extent to which I will profess competence in discussions with practicione
 will be such that I understand them.  If it helps others then I am delighted but that will be a side effect only.  I will cover the following:
 
 * [Historic Volatility](volatility.html)
-* Pricing a Vanilla European Call (and Put) with Black Scholes
+* [Pricing a Vanilla European Call (and Put) with Black Scholes](blackscholes.html)
 * Put-Call Parity
 * Implied Volatility
 * Greeks and impact of fundamentals on option prices

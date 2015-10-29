@@ -44,9 +44,10 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Volatility.fs" />
+    <Compile Include="BlackScholes.fs" />
     <None Include="paket.references" />
     <None Include="paket.template" />
+    <Compile Include="Volatility.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

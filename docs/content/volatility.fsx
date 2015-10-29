@@ -17,13 +17,12 @@ Volatility
 
 This module contains functions regarding historic volatility.
 
-In order to calculate volatility asset returns are required.  I seem to remember the reason you can't use prices is because prices are lognormally distributed 
-(although I'm not sure that is the crux of it) and because prices are related to each other, there is an element of autocorrelation and that stuffs things up 
-for some reason I have to check on (TODO).  There are 2 ways to estimate volatility from historic prices.  They are as follows : 
+In order to calculate volatility asset returns are required.  Asset returns are normally distributed while asset prices are lognormally distributed.  There are 2 ways to estimate volatility from historic prices.  They are as follows : 
 
-* percentage price changes
-* logarithmic price changes
+* percentage price changes or discrete returns
+* logarithmic price changes or continuous returns
 
+For short time periods <=1d then continuous returns are practically equivalent to continous returns.  
 
 *)
 
